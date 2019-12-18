@@ -75,6 +75,22 @@ imagesc(reshape(data(vals(4),:),m,n)), axis image, axis off;
 subplot(448);
 imagesc(reshape(data(vals(5),:),m,n)), axis image, axis off;
 
+
+%visualize some spectra:
+figure(2);
+subplot(221);
+plot(data(:,175)), hold on, plot(vals(2),data(vals(2),175),'*'); hold off;
+title('spectrum with peak corresponding to the circle');
+subplot(222); 
+plot(data(:,156)), hold on, plot(vals(3),data(vals(3),156),'*'); hold off;
+title('spectrum with peak corresponding to the square');
+subplot(223); 
+plot(data(:,520)), hold on, plot(vals(4),data(vals(4),520),'*'); hold off;
+title('spectrum with peak corresponding to the triangle');
+subplot(224); 
+plot(data(:,710)), hold on, plot(vals(5),data(vals(5),710),'*'); hold off;
+title('spectrum with peak corresponding to the triangle');
+
 %% do peak picking without spatial awareness
 
 addpath(genpath('..\..\Algorithm'));

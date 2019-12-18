@@ -75,6 +75,18 @@ imagesc(reshape(data(vals(4),:),m,n)), axis image, axis off;
 subplot(448);
 imagesc(reshape(data(vals(5),:),m,n)), axis image, axis off;
 
+
+%visualize some spectra:
+figure(2);
+subplot(221); 
+plot(data(:,156))
+title('spectrum with peak (square)');
+subplot(222);
+plot(data(:,175))
+
+subplot(222);
+plot(data(:,175))
+
 %% do peak picking without spatial awareness
 
 addpath(genpath('..\..\Algorithm'));
@@ -126,10 +138,10 @@ params.wI = getWeights(params.method,D,param);
 %visualize results
 subplot(4,4,13);
 imagesc(reshape(p(:,vals(2)),m,n)), axis image, axis off;
-subplot(4,4,10);
+subplot(4,4,14);
 imagesc(reshape(p(:,vals(3)),m,n)), axis image, axis off;
-subplot(4,4,11);
+subplot(4,4,15);
 imagesc(reshape(p(:,vals(4)),m,n)), axis image, axis off;
-subplot(4,4,12);
+subplot(4,4,16);
 imagesc(reshape(p(:,vals(5)),m,n)), axis image, axis off;
 
