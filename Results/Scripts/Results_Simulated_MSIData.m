@@ -105,6 +105,7 @@ params.noisest = 0;
 [p] = detectpeaks_gab(data.',lambda,60,0.5,60,params);
 
 %visualize results
+figure(1)
 subplot(449);
 imagesc(reshape(p(:,vals(2)),m,n)), axis image, axis off;
 subplot(4,4,10);
@@ -140,6 +141,7 @@ params.wI = getWeights(params.method,D,param);
 [p] = detectpeaks_gab(data.',lambda,60,0.5,60,params);
 
 %visualize results
+figure(1)
 subplot(4,4,13);
 imagesc(reshape(p(:,vals(2)),m,n)), axis image, axis off;
 subplot(4,4,14);
